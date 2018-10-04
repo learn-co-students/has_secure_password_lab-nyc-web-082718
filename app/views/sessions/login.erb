@@ -1,0 +1,11 @@
+<% if flash[:errors] %>
+<%= flash[:errors] %><br><br>
+<% end %>
+
+Log in<br><br>
+
+<%= form_for @user, action: 'create', method: :post do |f| %>
+  Name: <%= f.text_field :name %><br>
+  Password: <%= f.text_field :password %><br>
+  <%= f.submit %>
+<% end %>
