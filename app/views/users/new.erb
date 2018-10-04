@@ -1,0 +1,8 @@
+New user<br><br>
+
+<%= form_for @user, action: 'create', method: :post do |f| %>
+  Name: <%= f.text_field :name %><br>
+  Password: <%= f.text_field :password %><br>
+  Confirm password: <%= f.text_field :password_confirmation %><br>
+  <%= f.submit %>
+<% end %>
